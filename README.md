@@ -2,4 +2,4 @@
 本次作业选题是HPCG的部署和优化，于WSL上部署完成的时间为2024年12月19日。
 部署参考了以下文章：
 https://www.cnblogs.com/lijiaji/p/14283958.html
-
+运行结果的位置是：hpcg/setup/build/bin/2024.12.19
