@@ -70,7 +70,7 @@ TOUCH        = touch
 # - HPCG Directory Structure / HPCG library ------------------------------
 # ----------------------------------------------------------------------
 #
-TOPdir       = /home/liugu/Operations-Department-Operations/hpcg
+TOPdir       = /home/liugu/Operations-Department-Operations/optimize/test1/hpcg
 SRCdir       = $(TOPdir)/src
 INCdir       = $(TOPdir)/src
 BINdir       = $(TOPdir)/bin
@@ -83,8 +83,8 @@ BINdir       = $(TOPdir)/bin
 # used. The variable MPdir is only used for defining MPinc and MPlib.
 #
 MPdir        =/usr/bin
-MPinc        =-I$(MKdir)/include
-MPlib        =$(MKdir)/lib/libmpi.a
+MPinc        =-I$(MPdir)/include
+MPlib        =$(MPdir)/lin/libmpi.a
 #
 #
 # ----------------------------------------------------------------------

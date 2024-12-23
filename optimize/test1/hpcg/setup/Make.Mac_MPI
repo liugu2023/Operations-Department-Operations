@@ -70,7 +70,7 @@ TOUCH        = touch
 # - HPCG Directory Structure / HPCG library ------------------------------
 # ----------------------------------------------------------------------
 #
-TOPdir       = /home/liugu/Operations-Department-Operations/hpcg
+TOPdir       = .
 SRCdir       = $(TOPdir)/src
 INCdir       = $(TOPdir)/src
 BINdir       = $(TOPdir)/bin
@@ -82,9 +82,9 @@ BINdir       = $(TOPdir)/bin
 # header files,  MPlib  is defined  to be the name of  the library to be
 # used. The variable MPdir is only used for defining MPinc and MPlib.
 #
-MPdir        =/usr/bin
-MPinc        =-I$(MKdir)/include
-MPlib        =$(MKdir)/lib/libmpi.a
+MPdir        =
+MPinc        =
+MPlib        =
 #
 #
 # ----------------------------------------------------------------------
@@ -96,7 +96,7 @@ HPCG_LIBS     =
 #
 # - Compile time options -----------------------------------------------
 #
-# -DHPCG_NO_MPI	        Define to disable MPI
+# -DHPCG_NO_MPI		Define to disable MPI
 # -DHPCG_NO_OPENMP	Define to disable OPENMP
 # -DHPCG_CONTIGUOUS_ARRAYS Define to have sparse matrix arrays long and contiguous
 # -DHPCG_DEBUG       	Define to enable debugging output
@@ -118,8 +118,7 @@ HPCG_DEFS     = $(HPCG_OPTS) $(HPCG_INCLUDES)
 # ----------------------------------------------------------------------
 #
 CXX          = mpicxx
-#CXXFLAGS     = $(HPCG_DEFS) -fomit-frame-pointer -O3 -funroll-loops -W -Wall
-CXXFLAGS     = $(HPCG_DEFS) -O3 -ffast-math -ftree-vectorize -ftree-vectorizer-verbose=0
+CXXFLAGS     = $(HPCG_DEFS) -O3 -W -Wall -pedantic -std=c++11 -pipe
 #
 LINKER       = $(CXX)
 LINKFLAGS    = $(CXXFLAGS)
